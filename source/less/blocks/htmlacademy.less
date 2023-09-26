@@ -1,0 +1,54 @@
+.htmlacademy {
+  padding: 18px 20px 20px 20px;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+}
+
+.htmlacademy__text {
+  color: @base-gray-text;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.htmlacademy__link {
+  color: @base-gray-text;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 112px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-left: 4px;
+
+  &:hover {
+    color: @base-primary-text;
+  }
+
+  &:focus {
+    color: @base-primary-text;
+    outline: none;
+  }
+
+  &:active {
+    color: @alt-primery-darker-text;
+  }
+}

@@ -1,0 +1,124 @@
+.main-footer {
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    padding: 40px;
+    padding-top: 35px;
+  }
+}
+
+.main-footer__container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 1360px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.main-footer__logo-socials-wrapper {
+  width: 280px;
+  padding: 18px 20px 17px 20px;
+  border-bottom: 1px solid @base-secondary-text;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 728px;
+    padding-top: 38px;
+    padding-bottom: 8px;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    justify-content: start;
+  }
+}
+
+.main-footer__logo-link {
+  margin: 0;
+  padding: 0;
+  padding-top: 4px;
+  text-decoration: none;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 47px;
+    width: 318px;
+  }
+}
+
+.main-footer__logo-icon {
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.main-footer__name {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: @base-black-text;
+    padding: 0;
+    padding-top: 6px;
+    margin: 0;
+  }
+}
+
+.main-footer__social-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 160px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer__social-item {
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.main-footer__social-link {
+  color: @base-gray-text;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: 20px;
+
+  &:hover {
+    background-color: @base-secondary-text;
+    color: @base-primary-text;
+  }
+
+  &:focus {
+    background-color: @base-secondary-text;
+    color: @base-primary-text;
+    outline: none;
+  }
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
+    color: @base-primary-text;
+    outline: none;
+  }
+}
+

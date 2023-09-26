@@ -1,0 +1,109 @@
+.filter-milk {
+  margin-bottom: 34px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.filter-milk__label {
+  position: relative;
+}
+
+.filter-milk__text {
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 34px;
+}
+
+.filter-milk__text::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: @base-white-text;
+  outline: 2px solid @base-gray-text;
+  outline-offset: -2px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.filter-milk__text::after {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: @base-white-text;
+  border-radius: 50%;
+  content: "";
+}
+
+/* hover*/
+
+.filter-milk__text:hover {
+  color: @base-primary-text;
+}
+
+.filter-milk__input:hover + .filter-milk__text::before {
+  outline-color: @alt-primery-lighter-text;
+}
+
+.filter-milk__input:hover + .filter-milk__text::after {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+/* focus */
+
+.filter-milk__input:focus-visible + .filter-milk__text::before {
+  outline-color: @alt-primery-lighter-text;
+}
+
+.filter-milk__input:focus-visible + .filter-milk__text::after {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+/* checked */
+
+.filter-milk__input:checked + .filter-milk__text::before {
+  outline-color: @base-primary-text;
+}
+
+.filter-milk__input:checked + .filter-milk__text::after {
+  background-color: @base-primary-text;
+}
+
+/* disabled checked*/
+
+.filter-milk__input:checked:disabled + .filter-milk__text::before {
+  outline-color: @alt-light-grey-text;
+  cursor: default;
+}
+
+.filter-milk__input:checked:disabled + .filter-milk__text::after {
+  background-color: @alt-light-grey-text;
+  cursor: default;
+}
+
+/* disabled unchecked*/
+
+.filter-milk__input:disabled + .filter-milk__text::before {
+  background-color: @base-white-text;
+  outline-color: @alt-light-grey-text;
+  cursor: default;
+}
+
+.filter-milk__input:disabled + .filter-milk__text::after {
+  background-color: @base-white-text;
+  cursor: default;
+}
+
+.filter-milk__input:disabled ~ .filter-milk__text {
+  color: @base-gray-text;
+  cursor: default;
+}

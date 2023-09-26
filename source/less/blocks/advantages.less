@@ -1,0 +1,123 @@
+.advantages {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 10px;
+    padding-right: 10px;
+    column-gap: 30px;
+    row-gap: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 318px);
+    padding: 0;
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    width: 339px;
+    flex-direction: row;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    justify-content: center;
+    padding-bottom: 27px;
+  }
+}
+
+.advantages__icon {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: -58px;
+    margin-right: 20px;
+
+    &--clocks {
+      margin-top: -26px;
+    }
+
+    &--pocket {
+      margin-top: -39px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: 17px;
+  }
+}
+
+.advantages__text-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 267px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
+}
+
+.advantages__heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
+}
+
+.advantages__description {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2 / 3;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    width: 318px;
+  }
+}

@@ -1,0 +1,41 @@
+.footer-shop {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-shop__item {
+  padding: 0;
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+.footer-shop__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.footer-shop__link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @base-black-text;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+
+  &:hover {
+    color: @alt-primery-lighter-text;
+  }
+
+  &:focus {
+    color: @alt-primery-lighter-text;
+    outline: none;
+  }
+
+  &:active {
+    color: @alt-primery-darker-text;
+  }
+}

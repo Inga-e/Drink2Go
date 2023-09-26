@@ -1,0 +1,68 @@
+.direction-button {
+  display: flex;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 100%;
+  }
+
+  &:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(to right, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+  }
+
+  &:focus {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.direction-button__icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: @base-primary-text;
+
+  &--left {
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &--right {
+    right: 0;
+
+    @media (min-width: @tablet-width) {
+      right: 50%;
+      transform: translateX(50%) translateY(-50%);
+    }
+  }
+}
+
+.direction-button:disabled .direction-button__icon {
+  color: @base-gray-text;
+}

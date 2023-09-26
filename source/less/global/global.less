@@ -1,0 +1,24 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее*/
+html {
+  height: 100%;
+  font-family: @family-font;
+  font-style: @style-base;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+  }
+}
+
+body {
+  min-height: 100%;
+  color: @base-black-text;
+  margin: 0;
+}

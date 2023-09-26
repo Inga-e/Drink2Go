@@ -1,0 +1,99 @@
+.filter-country {
+  margin-bottom: 30px;
+}
+
+.filter-country__label {
+  position: relative;
+}
+
+.filter-country__text {
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 52px;
+  text-align: start;
+}
+
+.filter-country__text::before {
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: @base-gray-text;
+  top: -2px;
+  left: 0;
+}
+
+.filter-country__text::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: @base-white-text;
+  top: 0;
+  left: 2px;
+}
+
+.filter-country__input:checked + .filter-country__text::after {
+  left: 20px;
+}
+
+.filter-country__input:checked + .filter-country__text::before {
+  background-color: @base-primary-text;
+}
+
+/* hover */
+.filter-country__input:checked:hover + .filter-country__text::before {
+  background-color: @base-primary-text;
+  outline: 2px solid @base-primary-text;
+  outline-offset: -2px;
+}
+
+.filter-country__input:hover + .filter-country__text::before {
+  background-color: rgba(120, 89, 207, 0.25);
+  outline: 2px solid @alt-primery-lighter-text;
+  outline-offset: -2px;
+}
+
+.filter-country__input:hover + .filter-country__text {
+  color: @base-primary-text;
+}
+
+/* focus */
+.filter-country__input:focus-visible + .filter-country__text::before {
+  background-color: rgba(120, 89, 207, 0.25);
+  outline: 2px solid @alt-primery-lighter-text;
+  outline-offset: -2px;
+}
+
+/* disabled text, hover*/
+.filter-country__input:disabled + .filter-country__text {
+  color: @base-gray-text;
+  cursor: default;
+}
+
+.filter-country__input:disabled:hover + .filter-country__text::before {
+  outline: 2px solid @alt-light-grey-text;
+  outline-offset: -2px;
+}
+
+/*disabled unchecked*/
+.filter-country__input:disabled + .filter-country__text::before {
+  background-color: @alt-light-grey-text;
+}
+
+.filter-country__input:disabled + .filter-country__text::after {
+  background-color: @back-lightest-gray;
+}
+
+/*disabled checked*/
+.filter-country__input:disabled:checked + .filter-country__text::before {
+  background-color: @alt-light-grey-text;
+}
+
+.filter-country__input:disabled:checked + .filter-country__text::after {
+  background-color: @base-gray-text;
+}
